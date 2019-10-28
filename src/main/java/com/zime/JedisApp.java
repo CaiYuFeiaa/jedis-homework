@@ -40,9 +40,14 @@ public class JedisApp {
     public static void DelArticle(String articleName,Jedis jedis){
         jedis.del(articleName);
     }
+
     public static void UpTitle(Article article,String articlName,Jedis jedis){
         article.setTitle("aaa");
         String article1 = JSON.toJSONString(article);
         jedis.set(articlName,article1);
+    }
+
+    public static void getArticle (String articleName,Jedis jedis){
+//        Article article =
     }
 }
