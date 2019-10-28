@@ -18,7 +18,7 @@ public class Hash {
             article.setTime("20191028");
 
 //            addArticle(article,jedis);
-//            delArticle(3,jedis);
+            delArticle(3,jedis);
 //            UpArticle(1,"title","aabbcc",jedis);
             selArticle(1,2,jedis);
         } catch (Exception e) {
@@ -58,7 +58,7 @@ public class Hash {
         jedis.hdel("Article:" + postID,"author");
         jedis.hdel("Article:" + postID,"time");
         /**删除标题.**/
-        jedis.lrem("list:article",1,"Article:" + jedis.incr("postID"));
+        jedis.lrem("list:article",1,"Article:" + postID);
     }
 
     public static void delArticleV(int postID,String key,Jedis jedis){
