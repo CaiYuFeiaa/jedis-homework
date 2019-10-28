@@ -5,7 +5,7 @@ import redis.clients.jedis.Jedis;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Hash {
+public class HashDemo {
     public static void main(String[] args) {
         Jedis jedis = null;
         try {

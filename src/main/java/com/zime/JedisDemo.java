@@ -3,7 +3,7 @@ package com.zime;
 import redis.clients.jedis.Jedis;
 import com.alibaba.fastjson.JSON;
 
-public class JedisApp {
+public class JedisDemo {
     public static void main(String[] args){
         Jedis jedis = null;
         try{
